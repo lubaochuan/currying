@@ -27,7 +27,7 @@ Exercise 1: Define a function `curry3` that takes a three-argument function and 
 </details>
 
 Sometimes when you define a curried function, the internal function needs to be recursive. This raises the question: how do you make a recursive function call in a function defined only by lambda? The following code snippet is a sample. This is a curried function that multiples the first parameter by the factorial of the second.
-```
+```scheme
 (define multfact
   (lambda (a)
     (letrec ((factorial
@@ -125,7 +125,7 @@ Hint:
 </details>
 
 Exercise 5: Define a procedure `multi-compose` which takes an arbitrary number of procedures each taking and returning an arbitrary number of arguments and composes them all. Test it by defining procedures of multiple arguments which return appropriate numbers of arguments as lists. For example if we have procedures f, g, h, and k we should be able to compose them all with `(multi-compose f g h k)`. Notice that the functions you pass to `multi-compose` should return lists NOT atoms since we need to be sufficiently general to deal with multi-value functions. Here is some sample output:
-```
+```scheme
 (define fac
   (lambda (n)
     (cond
